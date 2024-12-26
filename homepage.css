@@ -1,0 +1,126 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.profiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    width: 100%;
+    max-width: 800px;
+    padding: 0 10px;
+}
+
+.profile {
+    text-align: center;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: opacity 0.3s ease;
+}
+
+.profile p {
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+.profile span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 0.9em;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.profile:hover img {
+    opacity: 0.5;
+}
+
+.profile:hover span {
+    opacity: 1;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 2em;
+    transition: opacity 0.3s;
+    z-index: 9999;
+}
+
+#overlay.hidden {
+    display: none;
+    opacity: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .profile {
+        width: 80px;
+        height: 80px;
+    }
+
+    .profile span {
+        font-size: 0.7em;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.8em;
+}
