@@ -13,6 +13,11 @@ header {
     text-align: center;
 }
 
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
 nav {
     background: linear-gradient(to right, #171717, #1c1a19); /* Gradient navigation bar */
     color: #fff;
