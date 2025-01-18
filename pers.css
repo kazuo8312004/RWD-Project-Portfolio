@@ -85,12 +85,6 @@ section {
     margin: 10px 0;
 }
 
-#skills {
-    display: flex;
-    flex-wrap: wrap; /* Optional: allows items to wrap to the next line if they don't fit */
-    gap: 10px;
-    background-color: #ff6b6b;
-}
 
 section h2 {
     margin-top: 0;
