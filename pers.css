@@ -26,6 +26,10 @@ header h1 {
     flex: 1;
 }
 
+section {
+    background-color: aquamarine;
+}
+
 nav ul {
     list-style-type: none;
     display: flex;
@@ -52,23 +56,20 @@ nav ul li a {
 }
 
 .section-intro {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
+    display: flex;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
     padding: 50px 0;
     background-color: #333;
 }
 
 .intro-content {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
+    display: flex;
     align-items: center;
+    gap: 20px;
 }
 
-.intro-text, .intro-image {
+.intro-text {
     margin: 0 20px;
 }
 
@@ -82,6 +83,13 @@ section {
     padding: 20px;
     background-color: #222;
     margin: 10px 0;
+}
+
+#skills {
+    display: flex;
+    flex-wrap: wrap; /* Optional: allows items to wrap to the next line if they don't fit */
+    gap: 10px;
+    background-color: #ff6b6b;
 }
 
 section h2 {
@@ -121,6 +129,29 @@ footer {
     color: #fff;
 }
 
+.contact-input {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.contact-textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.contact-button {
+    width: 50%;
+    padding: 15px;
+    font-size: 18px;
+    background-color: #af4c5e; /* Adjust the color as needed */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
 .contact-me form button {
     padding: 10px 20px;
     border: none;
@@ -154,26 +185,82 @@ footer {
     font-style: italic;
 }
 
+@media (max-width: 1024px) {
+    .header-left {
+        flex: 1;
+    }
+
+    .section-intro {
+        padding: 40px 20px;
+    }
+
+    .intro-content {
+        flex-direction: column;
+    }
+}
+
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
     }
 
-    .navbar ul {
+    nav ul {
         display: none;
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .navbar.show ul {
+    nav ul li {
+        width: 100%;
+        text-align: left;
+    }
+
+    nav ul.show {
         display: flex;
     }
 
     .section-intro {
-        grid-template-columns: 1fr;
+        padding: 30px 10px;
     }
 
     .intro-content {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-me form input,
+    .contact-me form textarea {
+        width: 90%;
+    }
+
+    .contact-button {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .intro-content {
+        gap: 10px;
+    }
+
+    .contact-me h2 {
+        font-size: 1.2em;
+    }
+
+    .project-card {
+        padding: 10px;
+        margin: 5px;
+    }
+
+    .project-card h3 {
+        font-size: 1.2em;
+    }
+
+    .project-card p {
+        font-size: 0.9em;
     }
 }
