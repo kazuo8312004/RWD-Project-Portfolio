@@ -34,15 +34,16 @@ nav a:hover, nav a.active {
     font-weight: bold;
     border-bottom: 2px solid #ffffff;
 }
-main {
+section {
     padding: 20px;
     background-color: hsla(17, 84%, 47%, 0.914);
     margin: 20px auto;
     max-width: 800px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    border-radius: 10px;
 }
-main img {
+section img {
     max-width: 100%;
     height: auto;
     margin-top: 20px;
